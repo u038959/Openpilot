@@ -67,8 +67,18 @@ class CarController:
       else:
         apply_curvature = 0.
 
-      self.apply_curvature_last = apply_curvature
+      # human turn detection
+      steeringPressed = CS.out.steeringPressed
+      steeringAngleDeg = CS.out.steeringAngleDeg
 
+      if steeringPressed and abs(steeringAngleDeg) > 60:
+        apply_curvature = 0
+        ramp_type = 3
+      else:
+        ramp_type = 0
+
+      self.apply_curvature_last = apply_curvature
+      
       if self.CP.carFingerprint in CANFD_CAR:
         # TODO: extended mode
         mode = 1 if CC.latActive else 0
