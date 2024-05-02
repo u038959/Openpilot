@@ -10,8 +10,8 @@ from openpilot.selfdrive.car.docs_definitions import CarFootnote, CarHarness, Ca
 from openpilot.selfdrive.car.fw_query_definitions import FwQueryConfig, Request, p16
 
 Ecu = car.CarParams.Ecu
-
-
+# 100 Hz
+# 100 Hz
 class CarControllerParams:
   ACCEL_MIN = -3.5 # m/s
   ACCEL_MAX = 2.0 # m/s
@@ -118,6 +118,7 @@ class CAR(StrEnum):
   KIA_FORTE_2021_NON_SCC = "KIA FORTE LXS 2021 NON-SCC"
   KIA_K5_2021 = "KIA K5 2021"
   KIA_K5_HEV_2020 = "KIA K5 HYBRID 2020"
+  KIA_K5_HEV_2024 = "KIA K5 HYBRID 2024 CANFD"
   KIA_K8_HEV_1ST_GEN = "KIA K8 HYBRID 1ST GEN"
   KIA_NIRO_EV = "KIA NIRO EV 2020"
   KIA_NIRO_EV_2ND_GEN = "KIA NIRO EV 2ND GEN"
