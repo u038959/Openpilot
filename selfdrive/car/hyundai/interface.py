@@ -36,7 +36,7 @@ class CarInterface(CarInterfaceBase):
     hda2 = Ecu.adas in [fw.ecu for fw in car_fw]
     CAN = CanBus(None, hda2, fingerprint)
 
-if not hda2 and 0x12a in fingerprint[CAN.ACAN]:
+    if not hda2 and 0x12a in fingerprint[CAN.ACAN]:
       hda2 = True
       CAN = CanBus(None, hda2, fingerprint)
     
