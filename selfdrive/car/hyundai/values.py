@@ -23,7 +23,7 @@ class CarControllerParams:
     self.STEER_DRIVER_MULTIPLIER = 2
     self.STEER_DRIVER_FACTOR = 1
     self.STEER_THRESHOLD = 150
-    self.STEER_STEP = 1  # 100 Hz
+    self.STEER_STEP = 0.7  # 100 Hz reduced to 70 Hz to reduce jitter
 
     if CP.carFingerprint in CANFD_CAR:
       self.STEER_MAX = 270
