@@ -1130,10 +1130,6 @@ FW_VERSIONS = {
       b'\xf1\x00JX1_ SCC FHCUP      1.00 1.01 99110-T6100         ',
       b'\xf1\x00JX1_ SCC -----      1.00 1.01 99110-T6100         ',
     ],
-    (Ecu.cornerRadar, 0x7b7, None): [
-      b'\xf1\x00JX1 BCW RR 1.00 , 1.00 (t\x94\x99"\x03\x08\x05S',
-      b'\xf1\x8b "\x11\t "\x11\x04 "\x02\x14 "\x02\x12',
-    ],
   },
   CAR.KIA_CARNIVAL_4TH_GEN: {
     (Ecu.fwdCamera, 0x7c4, None): [
