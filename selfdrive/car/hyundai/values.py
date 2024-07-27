@@ -27,11 +27,11 @@ class CarControllerParams:
 
     if CP.carFingerprint in CANFD_CAR:
       self.STEER_MAX = 270
-      self.STEER_DRIVER_ALLOWANCE = 250
+      self.STEER_DRIVER_ALLOWANCE = 300  # Increase from 250
       self.STEER_DRIVER_MULTIPLIER = 2
-      self.STEER_THRESHOLD = 250
-      self.STEER_DELTA_UP = 2
-      self.STEER_DELTA_DOWN = 3
+      self.STEER_THRESHOLD = 200  # Adjust based on testing
+      self.STEER_DELTA_UP = 1  # Decrease from 2
+      self.STEER_DELTA_DOWN = 2  # Decrease from 3
 
     # To determine the limit for your car, find the maximum value that the stock LKAS will request.
     # If the max stock LKAS request is <384, add your car to this list.
